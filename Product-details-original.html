@@ -31,7 +31,12 @@
                         <a href="" class="btn">Sign In</a>
                     </div>
                     <div class="bag">
-                        <img src="Images/Bag.png" alt="Bag">
+                        <a href="cart.html">
+                            <img src="Images/Bag.png" alt="Bag">
+                            <div class="cart-counter">
+                                <h1 id="cart-counter-text">0</h1>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -73,7 +78,7 @@
                 <div class="col-3"> <!--Glaze, box size and add to cart-->
                     <div class="col-name">
                         <div class="title">
-                            <h4>Original</h4>
+                            <h4 id="bun-name">Original</h4>
                             <h5>Cinnamon Bun</h5>
                         </div>
                     </div>
@@ -84,28 +89,27 @@
                                     <p style="font-family: 'Poppins', sans-serif;">Choose your glaze</p>
 
                                     <div class="radio">
-                                        <input type="radio" id="none" name="glaze" value="None"
-                                            checked>
+                                        <input type="radio" id="none" name="glaze" value="None" onClick="selectGlaze()" checked>
                                         <label for="None">None</label>
                                     </div>
                                     
                                     <div class="radio">
-                                        <input type="radio" id="sugar" name="glaze" value="Sugar-milk">
+                                        <input type="radio" id="sugar" name="glaze" value="Sugar-milk" onClick="selectGlaze()">
                                         <label for="Sugar-milk">Sugar Milk      +$0.99</label>
                                     </div>
                                     
                                     <div class="radio">
-                                        <input type="radio" id="vanilla" name="glaze" value="Vanilla-milk">
+                                        <input type="radio" id="vanilla" name="glaze" value="Vanilla-milk" onClick="selectGlaze()">
                                         <label for="Vanilla-milk">Vanilla Milk      +$1.19</label>
                                     </div>
 
                                     <div class="radio">
-                                        <input type="radio" id="chocolate" name="glaze" value="Double-chocolate">
+                                        <input type="radio" id="chocolate" name="glaze" value="Double-chocolate" onClick="selectGlaze()">
                                         <label for="Double-chocolate">Double Chocolate      +$1.29</label>
                                     </div>
                                 </div>
                                 <div class="glaze-image">
-                                    <img src="Images/Glaze-none.png" alt="">
+                                    <img id = "glazeImage" src="Images/Glaze-none.png" alt="">
                                 </div>
                             </div>
                             <div class="quantity">
@@ -113,28 +117,28 @@
                                     <p style="font-family: 'Poppins', sans-serif;">Choose your box size</p>
 
                                     <div class="radio">
-                                        <input type="radio" id="1" name="quantity" value="1"
-                                            checked>
-                                        <label for="1box">Box of 12</label>
+                                        <input type="radio" id="1" name="quantity" value="1" onClick="selectBox()" checked>
+                                        <label for="1">Box of 1</label>
                                     </div>
                                     
                                     <div class="radio">
-                                        <input type="radio" id="3" name="quantity" value="3">
-                                        <label for="3box">Box of 6</label>
+                                        <input type="radio" id="3" name="quantity" value="3" onClick="selectBox()">
+                                        <label for="3">Box of 3</label>
                                     </div>
                                     
                                     <div class="radio">
-                                        <input type="radio" id="6" name="quantity" value="6">
-                                        <label for="6box">Box of 3</label>
+                                        <input type="radio" id="6" name="quantity" value="6" onClick="selectBox()">
+                                        <label for="6">Box of 6</label>
                                     </div>
 
                                     <div class="radio">
-                                        <input type="radio" id="12" name="quantity" value="12">
-                                        <label for="12box">Box of 1</label>
+                                        <input type="radio" id="12" name="quantity" value="12" onClick="selectBox()">
+                                        <label for="12">Box of 12</label>
                                     </div>
+
                                 </div>
                                 <div class="quantity-image">
-                                    <img src="Images/Box-12.png" alt="">
+                                    <img id = "quantityImage" src="Images/Box-1.png" alt="">
                                 </div>
                             </div>
                             </div>
@@ -144,12 +148,11 @@
                                         <div class="total-text">
                                             <h2>Total:</h2>
                                         </div>
-                                        <div class="total-price">
-                                            <h1>$7.99</h1>
-                                        </div>
+                                        <h1>$</h1>
+                                        <div class="total-price" id="price-calc"><h1>2.99</h1></div>
                                     </div>
                                     <div class="add-to-cart">
-                                        <a href="" class="btn">ADD TO CART</a>
+                                        <a href="#" class="btn" onClick="displayAlert()">ADD TO CART</a>
                                     </div>
                                 </div>   
                             </div>
@@ -163,5 +166,6 @@
                 <p>BunBun Bake House, 2021 ©</p>
             </div>
         </div>
+        <script src="main.js"></script>
     </body>
 </html>
